@@ -11,3 +11,16 @@ Key Features:
 Join the TaskLab community and take control of your workflows today! 🚀  
 
 #TaskLab #OpenSource #TaskProcessing #WorkflowAutomation #DeveloperTools
+
+
+```
+ui ----- parser ----> db ------ parser ------> event_manager/handler
+|                      |                                           |
+|<----- config ------->|<--------------- runtime ----------------->|
+```
+
+```
+data_source --- http/logtail/kafka ---> dispatcher ---> event_manager ---> handler ---> api/callback/html
+|                                                 |                                                     |
+|<-------------------- collect ------------------>|<--------------------- runtime --------------------->|
+```
