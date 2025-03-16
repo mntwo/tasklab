@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
-	dataCollectApi := app.NewDataCollectionApi()
-	app.Run(dataCollectApi)
+	dataCollectApp := app.NewDataCollectionApp()
+	genEventApp := app.NewGenEventApp()
+	app.Run(dataCollectApp, genEventApp)
 }

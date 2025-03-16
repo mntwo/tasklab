@@ -9,7 +9,7 @@ import (
 	"github.com/mntwo/tasklab/internal/application/http_application"
 )
 
-func NewDataCollectionApi() application.Application {
+func NewDataCollectionApp() application.Application {
 	router := gin.New()
 
 	router.SecureJsonPrefix("")

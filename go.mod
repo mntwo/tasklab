@@ -1,6 +1,6 @@
 module github.com/mntwo/tasklab
 
-go 1.22.2
+go 1.23.5
 
 require (
 	github.com/LyricTian/gzip v0.1.1

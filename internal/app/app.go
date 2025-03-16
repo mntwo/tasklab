@@ -25,7 +25,7 @@ func Run(apps ...application.Application) {
 		go func(app application.Application) {
 			log.Info(ctx, "starting application", zap.String("name", app.GetName()))
 			if err := app.Start(); err != nil {
-				if errors.Is(err, http.ErrServerClosed) {
+				if errors.Is(err, http.ErrServerClosed) || errors.Is(err, application.ErrApplicationClosed) {
 					log.Info(ctx, "application closed", zap.String("name", app.GetName()))
 					return
 				}
