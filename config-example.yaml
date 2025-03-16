@@ -3,7 +3,7 @@ application:
   version: 0.0.1
   env: dev
 http_server:
-  - name: data_collection
+  - name: data_collection_api
     addr: 127.0.0.1:2001
     close_timeout: 2s
     write_timeout: 15s

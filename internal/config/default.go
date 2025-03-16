@@ -35,11 +35,23 @@ func GetApplication() *Application {
 	return defaultConfig.Application
 }
 
-func GetHttpServer() []*HttpServer {
+func GetHttpServers() []*HttpServer {
 	if defaultConfig == nil {
 		return nil
 	}
 	return defaultConfig.HttpServer
+}
+
+func GetHttpServer(name string) *HttpServer {
+	if defaultConfig == nil {
+		return nil
+	}
+	for _, s := range defaultConfig.HttpServer {
+		if s.Name == name {
+			return s
+		}
+	}
+	return nil
 }
 
 func GetLog() *Log {
