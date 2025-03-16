@@ -24,3 +24,7 @@ data_source --- http/logtail/kafka ---> dispatcher ---> event_manager ---> handl
 |                                                 |                                                     |
 |<-------------------- collect ------------------>|<--------------------- runtime --------------------->|
 ```
+
+```
+go run -i config-example.yaml
+```

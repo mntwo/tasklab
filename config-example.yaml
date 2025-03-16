@@ -1,0 +1,43 @@
+application:
+  name: tasklab
+  version: 0.0.1
+  env: dev
+http_server:
+  - name: data_collection
+    addr: 127.0.0.1:2001
+    close_timeout: 2s
+    write_timeout: 15s
+    read_timeout: 15s
+    idle_timeout: 60s
+log:
+  type: std
+  max_size: 128
+  max_backups: 3
+  max_age: 7
+  local_time: true
+  compress: false
+redis:
+  - name: main
+    host: 127.0.0.1
+    port: 6379
+    password:
+    db: 0
+    pool_size: 10
+    min_idle_conns: 10
+    dial_timeout: 200ms
+    read_timeout: 200ms
+    write_timeout: 200ms
+mysql:
+  - name: main
+    host: 127.0.0.1
+    port: 3306
+    user: root
+    password: 
+    database: test
+    max_open_conns: 10
+    max_idle_conns: 10
+    conn_max_idle_time: 300s
+    conn_max_lifetime: 1800s
+    conn_timeout: 2s
+    read_timeout: 2s
+    write_timeout: 2s
