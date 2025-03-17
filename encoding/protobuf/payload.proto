@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message Payload {
+  string project = 1;
+  string event = 2;
+  map<string, string> properties = 3;
+  string type = 4;
+  bytes pass_through = 5;
+  int64 ts = 6;
+}
