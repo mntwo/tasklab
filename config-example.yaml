@@ -16,28 +16,14 @@ log:
   max_age: 7
   local_time: true
   compress: false
-redis:
-  - name: main
+postgres:
+  - name: DB1
     host: 127.0.0.1
-    port: 6379
-    password:
-    db: 0
-    pool_size: 10
-    min_idle_conns: 10
-    dial_timeout: 200ms
-    read_timeout: 200ms
-    write_timeout: 200ms
-mysql:
-  - name: main
-    host: 127.0.0.1
-    port: 3306
-    user: root
-    password: 
-    database: test
+    port: 5432
+    user: mntwo
+    password: mntwo123
+    database: tasklab
     max_open_conns: 10
-    max_idle_conns: 10
-    conn_max_idle_time: 300s
-    conn_max_lifetime: 1800s
-    conn_timeout: 2s
-    read_timeout: 2s
-    write_timeout: 2s
+    max_idle_conns: 5
+    conn_max_lifetime: 30m
+    conn_max_idle_time: 10m

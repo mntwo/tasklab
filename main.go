@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
+	db := app.NewDatabaseApp()
 	dataCollectApp := app.NewDataCollectionApp()
 	genEventApp := app.NewGenEventApp()
-	app.Run(dataCollectApp, genEventApp)
+	app.Run(db, dataCollectApp, genEventApp)
 }
