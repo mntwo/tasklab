@@ -196,7 +196,7 @@ func getValue(token interface{}, event map[string]interface{}) (interface{}, err
 		if value, ok := event[t]; ok {
 			return value, nil
 		}
-		return nil, fmt.Errorf("unknown attribute: %s", t)
+		return t, nil
 	default:
 		return t, nil
 	}

@@ -13,7 +13,7 @@ func TestAst(t *testing.T) {
 	}
 
 	// t1 := `(and (== age 20) (>= score 51) (in status ("active" "pending")))`
-	t2 := `(<= 1.1 1.1)`
+	t2 := `(== "status" "active")`
 	expr, err := ParseExpression(t2)
 	if err != nil {
 		fmt.Println("Parse error:", err)
